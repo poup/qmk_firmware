@@ -1,0 +1,69 @@
+
+
+const uint32_t PROGMEM unicode_map[] = {  
+  [A_GRAV]  		= 0x00E0,  // à
+  [A_GRAV_MAJ] 		= 0x00C0,  // À
+  [A_CIRC]  		= 0x00E2,  // â
+  [A_CIRC_MAJ] 		= 0x00C2,  // Â
+  [A_TREM] 			= 0x00E4,  // ä
+  [A_TREM_MAJ] 		= 0x00C4,  // Ä  
+						
+  [E_AIGU] 			= 0x00E9,  // é
+  [E_AIGU_MAJ] 		= 0x00C9,  // É
+  [E_GRAV]  		= 0x00E8,  // è
+  [E_GRAV_MAJ] 		= 0x00C8,  // È
+  [E_CIRC]  		= 0x00EA,  // ê
+  [E_CIRC_MAJ] 		= 0x00CA,  // Ê
+  [E_TREM]  		= 0x00EB,  // ë
+  [E_TREM_MAJ] 		= 0x00CB,  // Ë
+						
+  [I_GRAV]  		= 0x00EC,  // ì
+  [I_GRAV_MAJ] 		= 0x00CC,  // Ì
+  [I_CIRC]  		= 0x00EE,  // î
+  [I_CIRC_MAJ] 		= 0x00CE,  // Î
+  [I_TREM]  		= 0x00EF,  // ï
+  [I_TREM_MAJ] 		= 0x00CF,  // Ï
+							  
+  [O_GRAV]  		= 0x00F2,  // ò
+  [O_GRAV_MAJ] 		= 0x00D2,  // Ò								  
+  [O_CIRC]  		= 0x00F4,  // ô
+  [O_CIRC_MAJ] 		= 0x00D4,  // Ô
+  [O_TREM]  		= 0x00F6,  // ö
+  [O_TREM_MAJ] 		= 0x00D6,  // Ö
+							  
+  [U_GRAV]  		= 0x00F9,  // ù
+  [U_GRAV_MAJ] 		= 0x00D9,  // Ù
+  [U_CIRC]  		= 0x00FB,  // û
+  [U_CIRC_MAJ] 		= 0x00DB,  // Û
+  [U_TREM]  		= 0x00FC,  // ü
+  [U_TREM_MAJ] 		= 0x00DC,  // Ü
+							  
+  [C_CEDILLE]  		= 0x00E7,  // ç
+  [C_CEDILLE_MAJ] 	= 0x00C7,  // Ç
+							  
+  [CARRE]			= 0x00B2,  // ²
+  [CUBE] 			= 0x00B3,  // ³
+  [EURO] 			= 0x20AC,  // €
+  [BAHT] 			= 0x0E3F,  // ฿
+  [COPYRIGHT]  		= 0x00A9,  // ©
+  [REGISTERED] 		= 0x00AE,  // ®
+  [OMEGA]  			= 0x03C9,  // ω
+  [OMEGA_MAJ] 		= 0x03A9,  // Ω								  
+								  
+  [OE]  			= 0x0153,  // œ
+  [OE_MAJ] 			= 0x0152,  // Œ
+  [PI] 				= 0x03C0,  // π
+  [DEGREE] 			= 0x00B0,  // °
+  [N_TILDE]  		= 0x00F1,  // ñ
+  [N_TILDE_MAJ] 	= 0x00D1,  // Ñ
+  [MICRO]  			= 0x00B5,  // µ
+  [SIGMA] 			= 0x03C3,  // σ
+  [INFEQ]  			= 0x2264,  // ≤
+  [SUPEQ] 			= 0x2265,  // ≥
+  [GUILL_G]  		= 0x00AB,  // «
+  [GUILL_R] 		= 0x00BB,  // »
+  [UNEQUAL]  		= 0x2260,  // ≠
+  [PRETTYMUCH] 		= 0x2248,  // ≈
+  [INFINIT] 		= 0x221E  // ∞
+								  
+};
