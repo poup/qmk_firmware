@@ -45,7 +45,7 @@
 #define kx_CUT  LCTL(KC_X)             //  >>      >>      LGUI(KC_X)
 #define kx_PSTE LCTL(KC_V)             //  >>      >>      LGUI(KC_V)
 #define kx_UNDO LCTL(KC_Z)             //  >>      >>      LGUI(KC_Z)
-#define kx_FIND S(KC_FN3)   
+#define kx_FIND LCTL(KC_F)   
           
 #define kx_AC_L LCA(KC_LEFT)        
 #define kx_AC_R LCA(KC_RIGHT)          
