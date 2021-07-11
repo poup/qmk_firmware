@@ -10,7 +10,7 @@
 // Right-hand home row mods
 #define HOME_N RCTL_T(KC_N)
 #define HOME_E RSFT_T(KC_E)
-#define HOME_I LALT_T(KC_I)
+#define HOME_I LALT[_T(KC_I)
 #define HOME_O RGUI_T(KC_O)
 
 // alias
@@ -41,11 +41,21 @@
 #define K_RGSTR ALGR(KC_R)
 #define K_DEGRE SAGR(KC_SCLN)
 
+#define kx_COPY LCTL(KC_C)             //Mac, change it to LGUI(KC_C)
+#define kx_CUT  LCTL(KC_X)             //  >>      >>      LGUI(KC_X)
+#define kx_PSTE LCTL(KC_V)             //  >>      >>      LGUI(KC_V)
+#define kx_UNDO LCTL(KC_Z)             //  >>      >>      LGUI(KC_Z)
+#define kx_FIND S(KC_FN3)   
+          
+#define kx_AC_L LCA(KC_LEFT)        
+#define kx_AC_R LCA(KC_RIGHT)          
+
 enum layer_names {
     _CO,	
     _QW,
     _FN,
-    _ACCENT
+    _ACCENT,
+    _NAV
 };
 
 // French chars
@@ -78,7 +88,22 @@ enum custom_keycodes {
   DEGREE,
   N_TILDE,
   PRETTYMUCH,
-  INFINIT
+  INFINIT,
+  
+  x_QUOTE,
+  x_QUOT2,
+  x_1,
+  x_2,
+  x_3,
+  x_4,
+  x_5,
+  x_6,
+  x_7,
+  x_8,
+  x_9,
+  x_0,
+  SLCT_L, // select line
+  SLCT_W  // select word
 };
 
 
@@ -90,5 +115,6 @@ enum custom_keycodes {
 
 
 // layers keys
-#define KL_ACC OSL(_ACCENT)
+#define KL_ACC MO(_ACCENT)
 #define KL_FN  TT(_FN)
+#define KL_NAV  TT(_NAV)
