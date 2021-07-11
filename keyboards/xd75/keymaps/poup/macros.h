@@ -3,31 +3,31 @@
 #include QMK_KEYBOARD_H
 #include "keys.h"
 
-bool shift_pressed(void) {
-    return (get_mods() & (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT))) != 0;
-}
+uint8_t mod_state;
 
 bool reverse_shift(uint16_t letter, keyrecord_t *record) {
 	if (record->event.pressed) {
-		if(shift_pressed()) {
-			unregister_code(KC_LSFT);
+		mod_state = get_mods();
+		if (mod_state & MOD_MASK_SHIFT) {
+			del_mods(MOD_MASK_SHIFT);
 			tap_code(letter);
-			register_code(KC_LSFT);
+			set_mods(mod_state);
 		} else {		 
-			tap_code(S(letter));
+		tap_code16(S(letter));
 		}
     }
 	return false;
 }
-
+ 
 
 bool tap_quote(bool forceShift, keyrecord_t *record) {
 	if (record->event.pressed) {
 		if(forceShift) {
-			register_code(KC_LSFT);
+			mod_state = get_mods();
+			add_mods(MOD_MASK_SHIFT);
 			tap_code(KC_QUOT);
+			set_mods(mod_state);
 			tap_code(KC_SPACE);
-			unregister_code(KC_LSFT);
 		} else {		
 			tap_code(KC_QUOT);
 			tap_code(KC_SPACE);
@@ -48,10 +48,11 @@ bool tap_accent_circ(uint16_t letter, keyrecord_t *record) {
 
 bool tap_accent_grav(uint16_t letter, keyrecord_t *record) {
 	if (record->event.pressed) {
-		if(shift_pressed()) {
-			unregister_code(KC_LSFT);
+		mod_state = get_mods();
+		if (mod_state & MOD_MASK_SHIFT) {
+			del_mods(MOD_MASK_SHIFT);
 			tap_code(KC_GRV);
-			register_code(KC_LSFT);
+			set_mods(mod_state);
 			tap_code(letter);
 		} else {		
 			tap_code(KC_GRV);
@@ -68,7 +69,6 @@ bool tap_accent_trem(uint16_t letter, keyrecord_t *record) {
     }
 	return false;
 }
-
 
 
 

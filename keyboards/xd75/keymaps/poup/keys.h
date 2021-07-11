@@ -117,4 +117,4 @@ enum custom_keycodes {
 // layers keys
 #define KL_ACC MO(_ACCENT)
 #define KL_FN  TT(_FN)
-#define KL_NAV  TT(_NAV)
+#define KL_NAV LT(_NAV, KC_ENT)

@@ -7,21 +7,19 @@
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
         case _FN:
-            rgblight_setrgb_green();
-            break;
-       /*
-	   case _NAV:
-            rgblight_setrgb_springgreen();
-            break;
-        case _INTER:
-            rgblight_setrgb_teal();
-            break;
-        case _ADJUST:
             rgblight_setrgb_red();
             break;
-			*/
+			
+        case _ACCENT:
+            rgblight_setrgb_teal();
+            break;
+       
+	   case _NAV:
+            rgblight_setrgb_pink();
+            break;
+			
         default:  //  for any other layers, or the default layer
-            rgblight_setrgb_yellow();
+            rgblight_setrgb_green();
             break;
     }
     return state;

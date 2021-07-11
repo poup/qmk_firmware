@@ -131,16 +131,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case x_1: return reverse_shift(keycode, record);
-        case x_2: return reverse_shift(keycode, record);
-        case x_3: return reverse_shift(keycode, record);
-        case x_4: return reverse_shift(keycode, record);
-        case x_5: return reverse_shift(keycode, record);
-        case x_6: return reverse_shift(keycode, record);
-        case x_7: return reverse_shift(keycode, record);
-        case x_8: return reverse_shift(keycode, record);
-        case x_9: return reverse_shift(keycode, record);
-        case x_0: return reverse_shift(keycode, record);
+        case x_1: return reverse_shift(KC_1, record);
+        case x_2: return reverse_shift(KC_2, record);
+        case x_3: return reverse_shift(KC_3, record);
+        case x_4: return reverse_shift(KC_4, record);
+        case x_5: return reverse_shift(KC_5, record);
+        case x_6: return reverse_shift(KC_6, record);
+        case x_7: return reverse_shift(KC_7, record);
+        case x_8: return reverse_shift(KC_8, record);
+        case x_9: return reverse_shift(KC_9, record);
+        case x_0: return reverse_shift(KC_0, record);
 		
         case x_QUOTE: return tap_quote(false, record);
         case x_QUOT2: return tap_quote(true, record);
