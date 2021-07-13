@@ -100,17 +100,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
      * |        | _      | !      | =      | (      | '      |        |        |        | "      | )      | =      | +      | -      | Play   |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-     * |        | XXXXXX | XXXXXX | XXXXXX | [      | XXXXXX |        |        |        | $      | ]      | _      | Play   | VOL+   | XXXXXX |
+     * |        | XXXXXX | XXXXXX | XXXXXX | [      | XXXXXX | Play   | VOL+   |        | $      | ]      | _      | XXXXXX | UP     | XXXXXX |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
-     * |        |        |        |        |        |        |        |        |        |        |        |        | PREV   | VOL-   | NEXT   |
+     * |        |        |        |        |        |        | PREV   | VOL-   | NEXT   |        |        |        | LEFT   | DOWN   | RIGHT  |
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_FN] = LAYOUT_ortho_5x15( /* FUNCTION */
          KC_ESC,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5, XXXXXXX,  KC_F11,  KC_F12,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_DEL,
         _______,  KC_F11,  KC_F12,   K_INF,  K_LCBR, XXXXXXX, KC_PSCR, KC_NLCK, KC_PAUS, XXXXXXX,  K_RCBR,   K_SUP,  KC_F11,  KC_F12, XXXXXXX,
         _______, K_UNDER,  K_EXCL,   K_EQL,  K_LPRN, x_QUOTE, _______, _______, _______, x_QUOT2,  K_RPRN,   K_EQL,  K_PLUS,  K_MINS, KC_MPLY,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX,   K_LBR, XXXXXXX, _______, _______, _______, S(KC_4),   K_RBR, K_UNDER, KC_MPLY, KC_VOLU, XXXXXXX,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT
+        _______, XXXXXXX, XXXXXXX, XXXXXXX,   K_LBR, XXXXXXX, KC_MPLY, KC_VOLU, _______, S(KC_4),   K_RBR, K_UNDER, XXXXXXX,   KC_UP, XXXXXXX,
+        _______, _______, _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT
     ),
 	
 	/* NAVIGATION
@@ -217,15 +217,14 @@ void matrix_scan_user(void) {
 }
 
 void leader_start(void) {
-  // sequence started
   isLeading = true;	
 }
 
 void leader_end(void) {
-  // sequence ended (no success/failure detection)
     isLeading = false;
 }
 
+//
 
 void persistent_default_layer_set(uint16_t default_layer) {
     eeconfig_update_default_layer(default_layer);
