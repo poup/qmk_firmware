@@ -32,7 +32,7 @@
 #define K_MINS    KC_MINS
 #define K_UNDER S(KC_MINS)
 
-#define K_EXCL S(KC_DOT)
+#define K_EXCL S(KC_1)
 
 #define E_AIGU  RALT(KC_E)
 
@@ -113,8 +113,3 @@ enum custom_keycodes {
 #define LC__CBR		LCTL_T(S(KC_LCBR)) // Left shift if hold, { if tap
 #define RC__CBR		RCTL_T(S(KC_RCBR)) // Right shift if hold, } if tap
 
-
-// layers keys
-#define KL_ACC MO(_ACCENT)
-#define KL_FN  TT(_FN)
-#define KL_NAV LT(_NAV, KC_ENT)
